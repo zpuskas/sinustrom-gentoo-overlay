@@ -39,6 +39,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
 
+PATCHES=( "${FILESDIR}/${P}-openconnect-7.01.patch" )
+
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use !modemmanager DISABLE_MODEMMANAGER_SUPPORT)
