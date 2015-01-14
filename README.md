@@ -5,9 +5,9 @@ This Gentoo overlay contains only a few selected packages,
 mainly because one of the following reasons:
 
 * Not in official Gentoo portage tree
-* Not in the overlays offered by layman
-* Broken in the above repos
-* Experimental package
+* Not in the overlays offered by layman or without a maintainer
+* Broken in the above repos (and can't wait for it to be fixed)
+* Experimental package or for testing purposes
 
 ## Adding this overlay to your system
 
@@ -62,3 +62,13 @@ See [#525818](https://bugs.gentoo.org/show_bug.cgi?id=525818)
 
 * Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
 More details at the [project page](http://imagej.nih.gov/ij/)
+
+### sys-auth
+
+#### oath-toolkit
+
+* The OATH Toolkit provide components for building one-time password
+authentication systems. It contains shared libraries, command line tools
+and a PAM module. Read more at the 
+[project page](http://www.nongnu.org/oath-toolkit/).
+Aslo see [#401409](https://bugs.gentoo.org/show_bug.cgi?id=401409)
