@@ -11,12 +11,8 @@ mainly because one of the following reasons:
 
 ## Adding this overlay to your system
 
-Save the repository XML descriptor file to **/etc/layman/overlays/** and add
-overlay using layman:
+Available in layman. Just run the following command to add it:
 
-    $ wget https://raw.githubusercontent.com/zpuskas/sinustrom-gentoo-overlay/master/layman.xml -O /tmp/sinustrom.xml
-    $ su
-    # mv /tmp/sinustrom.xml /etc/layman/overlays/sinustrom.xml
     # layman -a sinustrom
 
 If you don't have layman setup yet, please visit the related
