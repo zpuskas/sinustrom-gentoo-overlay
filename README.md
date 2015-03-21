@@ -48,9 +48,18 @@ See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 
 #### youtube-viewer-3.1.1-r1
 
-* Add dev-perl/XML-Fast as a depenceny to avoid constant error messages when
+* Add dev-perl/XML-Fast as a dependency to avoid constant error messages when
 using the GTK interface.
 See [#525818](https://bugs.gentoo.org/show_bug.cgi?id=525818)
+
+### sci-electronics
+
+#### kicad-20150320
+
+* Add latest version of KiCAD as Gentoo portage version is unmaintained.
+See [#499040](https://bugs.gentoo.org/show_bug.cgi?id=499040) and
+[#263053](https://bugs.gentoo.org/show_bug.cgi?id=263053). This is a package
+for elec tronic schematic and PCB design.
 
 ### sci-misc
 
@@ -67,4 +76,4 @@ More details at the [project page](http://imagej.nih.gov/ij/)
 authentication systems. It contains shared libraries, command line tools
 and a PAM module. Read more at the 
 [project page](http://www.nongnu.org/oath-toolkit/).
-Aslo see [#401409](https://bugs.gentoo.org/show_bug.cgi?id=401409)
+Also see [#401409](https://bugs.gentoo.org/show_bug.cgi?id=401409)
