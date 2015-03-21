@@ -59,7 +59,7 @@ See [#525818](https://bugs.gentoo.org/show_bug.cgi?id=525818)
 * Add latest version of KiCAD as Gentoo portage version is unmaintained.
 See [#499040](https://bugs.gentoo.org/show_bug.cgi?id=499040) and
 [#263053](https://bugs.gentoo.org/show_bug.cgi?id=263053). This is a package
-for elec tronic schematic and PCB design.
+for electronic schematic and PCB design.
 
 ### sci-misc
 
