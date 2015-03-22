@@ -11,7 +11,9 @@
 		schematic diagrams and printed circuit board artwork.
 	</longdescription>
     <use>
-		<flag name='pdf'>Install pdf docs</flag>
+		<flag name='boost'>Compile against dev-libs/boost libraries</flag>
+		<flag name='help'>Install help documentation and tutorials</flag>
 		<flag name='github'>Build GitHub plugin</flag>
+		<flag name='i18n'>Install GUI language files</flag>
 	</use>
 </pkgmetadata>

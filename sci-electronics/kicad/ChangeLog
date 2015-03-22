@@ -2,14 +2,26 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.67 2014/08/10 20:27:55 slyfox Exp $
 
+*kicad-20150320-r1 (21 Mar 2015)
+
+  21 Mar 2015; Zoltan Puskas <zoltan@sinustrom.info> +kicad-20150520-r1.ebuild
+  -kicad-20150320.ebuild, metadata.xml:
+  Use Github to get tarballs instead of downloading the entire bzr repository. 
+  Add use flags [boost, i18n], replace use flag [pdf] with [help], remove
+  linguas [en] as it is the default. Fix package depencencies. Separate
+  language file and documentation installation. Fix documentation installation
+  path, so kicad can find it. Allow to choose between built in and system boost
+  library. Update metadata with new useflag descriptions.
+
 *kicad-20150320 (21 Mar 2015)
 
-  21 Mar 2015; Zoltan Puskas <zoltan@sinustrom.info> +kicad-20150520.ebuild:
+  21 Mar 2015; Zoltan Puskas <zoltan@sinustrom.info> +kicad-20150520.ebuild,
+  metadata.xml:
   Version bump (bug #263053), depend on x11-libs/wxGTK-3.0 (bug #499040),
   update dependencies according to upstream, new useflags [doc, examples,
   github, minimal, pdf, python, python_targets_python2_7, webkit], new
   languages [bg, ca, cs, el_GR, fi, ko, nl, sl, sv] and build against system
-  boost by default.
+  boost by default. Added use flag descriptions and myself to metadata.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> kicad-20130518.ebuild:
   QA: drop trailing '.' from DESCRIPTION
