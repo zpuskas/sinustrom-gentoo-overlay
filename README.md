@@ -52,6 +52,13 @@ See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 using the GTK interface.
 See [#525818](https://bugs.gentoo.org/show_bug.cgi?id=525818)
 
+### net-p2p
+
+#### transmission-2.84-r2
+
+* Fix wrong use flag settings that forced installing Qt on a headless environment
+See [#544416](https://bugs.gentoo.org/show_bug.cgi?id=544416)
+
 ### sci-electronics
 
 #### kicad-20150320
