@@ -2,6 +2,16 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.35 2014/08/10 17:37:38 ago Exp $
 
+  31 Mar 2015; Zoltan Puskas <zoltan@sinustrom.info> -youtube-viewer-3.1.1-r1.ebuild
+  +youtube-viewer-3.1.2.ebuild, -files/youtube-viewer-3.0.8-button.patch:
+  Remove old, add new release
+
+*youtube-viewer-3.1.2 (31 Mar 2015)
+
+  31 Mar 2015; Zoltan Puskas <zoltan@sinustrom.info> youtube-viewer-3.1.1-r1.ebuild:
+  Replace perl-module_pkg_preinst with perl_set_version
+  Remove call to perl-module_pkg_postinst and perl-module_pkg_postrm
+
   18 Oct 2014; Zoltan Puskas <zoltan@sinustrom.info> youtube-viewer-3.1.1-r1.ebuild:
   add dev-perl/XML-Fast dep 
 
