@@ -29,6 +29,14 @@ civil, nautical, and astronomical twilights. It has features that make it
 useful for home automation tasks.
 More details at the [project page](http://www.risacher.org/sunwait/).
 
+### app-office
+
+#### jstock-1.0.7.5
+
+* jstock is a free stock market application intended towards more serious traders.
+Allows to follow and manage your stock portfolio. Due to building environment
+constraints it's a binary package for now.
+
 ### app-text
 
 #### aspell-0.60.6.1
