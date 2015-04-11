@@ -12,7 +12,7 @@ DESCRIPTION="Jstock free stock market software"
 HOMEPAGE="http://jstock.org/"
 SRC_URI="https://github.com/yccheok/${PN}/releases/download/release_${MY_PV}/${PN}-${PV}-bin.zip"
 
-LICENSE="GPLv2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
