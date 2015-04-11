@@ -56,8 +56,8 @@ See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 
 #### cursetag
 
-* NCurses based audio file tag (metadata) editor 
-[project page](https://github.com/lotuskip/cursetag)
+* NCurses based audio file tag (metadata) editor. 
+More details on the [project page](https://github.com/lotuskip/cursetag)
 
 ### net-misc
 
@@ -81,4 +81,4 @@ for electronic schematic and PCB design.
 #### imagej-1.49n
 
 * Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
-More details at the [project page](http://imagej.nih.gov/ij/)
+More details on the [project page](http://imagej.nih.gov/ij/)
