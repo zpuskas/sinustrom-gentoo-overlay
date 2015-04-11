@@ -52,6 +52,13 @@ See [#456090](https://bugs.gentoo.org/show_bug.cgi?id=456090)
 * Patch for compatibility with openconnect-7.01
 See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 
+### media-sound
+
+#### cursetag
+
+* NCurses based audio file tag (metadata) editor 
+[project page](https://github.com/lotuskip/cursetag)
+
 ### net-misc
 
 #### youtube-viewer-3.1.2
@@ -75,13 +82,3 @@ for electronic schematic and PCB design.
 
 * Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
 More details at the [project page](http://imagej.nih.gov/ij/)
-
-### sys-auth
-
-#### oath-toolkit
-
-* The OATH Toolkit provide components for building one-time password
-authentication systems. It contains shared libraries, command line tools
-and a PAM module. Read more at the 
-[project page](http://www.nongnu.org/oath-toolkit/).
-Also see [#401409](https://bugs.gentoo.org/show_bug.cgi?id=401409)
