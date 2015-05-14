@@ -8,7 +8,7 @@ inherit eutils versionator
 
 MY_PV=$(replace_all_version_separators '-')
 
-DESCRIPTION="Jstock free stock market software"
+DESCRIPTION="JStock Free Stock Market Software"
 HOMEPAGE="http://jstock.org/"
 SRC_URI="https://github.com/yccheok/${PN}/releases/download/release_${MY_PV}/${PN}-${PV}-bin.zip"
 
@@ -40,7 +40,7 @@ src_install() {
 
 	# Make desktop entry for easier launching
 	newicon ${FILESDIR}/${PN}.png ${PN}-icon128.png
-	make_desktop_entry "${ROOT}/opt/jstock/jstock.sh" "jstock free stock market software" ${PN}-icon128 "Office"
+	make_desktop_entry "${ROOT}/opt/jstock/jstock.sh" "jstock" ${PN}-icon128 "Office"
 }
 
 pkg_postinst() {
