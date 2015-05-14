@@ -27,11 +27,10 @@ If you don't have layman setup yet, please visit the related
 * Sunwait is a small C program for calculating sunrise and sunset, as well as
 civil, nautical, and astronomical twilights. It has features that make it
 useful for home automation tasks.
-More details at the [project page](http://www.risacher.org/sunwait/).
 
 ### app-office
 
-#### jstock-1.0.7.5
+#### jstock-1.0.7.6
 
 * jstock is a free stock market application intended towards more serious traders.
 Allows to follow and manage your stock portfolio. Due to building environment
@@ -45,6 +44,18 @@ constraints it's a binary package for now.
 variable in make.conf the appropriate dictionaries are pulled in.
 See [#456090](https://bugs.gentoo.org/show_bug.cgi?id=456090)
 
+### dev-perl
+
+#### LWP-UserAgent-Cached-0.06
+
+* Cached user agent perl library. Added as youtube-viewer needs it.
+
+### dev-python
+
+#### csvkit-0.9.2
+
+* A suite of utilities for converting to and working with CSV
+
 ### kde-misc
 
 #### plasma-nm-0.9.3.5
@@ -57,15 +68,25 @@ See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 #### cursetag
 
 * NCurses based audio file tag (metadata) editor. 
-More details on the [project page](https://github.com/lotuskip/cursetag)
 
 ### net-misc
 
-#### youtube-viewer-3.1.2
+#### youtube-viewer-3.1.5
 
 * Add dev-perl/XML-Fast as a dependency to avoid constant error messages when
 using the GTK interface, plus newer release.
+* Updated version with support for new YouTube API
 See [#525818](https://bugs.gentoo.org/show_bug.cgi?id=525818)
+
+### net-p2p
+
+#### btsync-1.4.106
+
+* Bittorrent sync package
+
+#### btsync-gui-0.8.5
+
+* Bittorrent sync GTK UI for Linux systems.
 
 ### sci-electronics
 
@@ -78,7 +99,6 @@ for electronic schematic and PCB design.
 
 ### sci-misc
 
-#### imagej-1.49n
+#### imagej-1.49{n,q,s}
 
 * Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
-More details on the [project page](http://imagej.nih.gov/ij/)
