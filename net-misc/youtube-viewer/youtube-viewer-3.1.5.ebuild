@@ -22,6 +22,8 @@ RDEPEND="
 	|| ( media-video/mplayer[X,network]
 		media-video/mplayer2[X,network]
 		media-video/mpv[X] )
+	dev-perl/LWP-UserAgent-Cached
+	dev-perl/JSON-XS
 	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
 	virtual/perl-Term-ANSIColor
@@ -37,8 +39,6 @@ RDEPEND="
 DEPEND="virtual/perl-Module-Build"
 
 SRC_TEST="do"
-
-S=${WORKDIR}/${P}/WWW-YoutubeViewer
 
 src_prepare() {
 	perl-module_src_prepare
@@ -78,7 +78,6 @@ pkg_postinst() {
 	elog "  dev-perl/Term-ReadLine-Gnu (for a better STDIN support)"
 	elog "  dev-perl/Text-CharWidth (print the results in a fixed-width"
 	elog "    format (--fixed-width, -W))"
-	elog "  net-misc/gcap (for retrieving Youtube closed captions)"
 	elog "  virtual/perl-File-Temp (for posting comments)"
 	elog "  virtual/perl-Scalar-List-Utils (to shuffle the playlists"
 	elog "    (--shuffle, -s))"
