@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit eutils distutils-r1 gnome2-utils python-r1 versionator
 
-DESCRIPTION="btsync GTK "
+DESCRIPTION="btsync GTK UI for Linux systems"
 HOMEPAGE="http://www.yeasoft.com/site/projects:btsync-deb:btsync-gui"
 SRC_URI="http://www.yeasoft.com/downloads/btsync-deb/${PN}/${PN}_${PV}.orig.tar.gz"
 
