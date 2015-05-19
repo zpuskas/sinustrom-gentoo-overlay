@@ -26,6 +26,7 @@ DEPEND="
    media-gfx/qrencode-python[${PYTHON_USEDEP}]
    dev-python/dbus-python[${PYTHON_USEDEP}]
    dev-python/requests[${PYTHON_USEDEP}]
+   dev-python/pygobject[${PYTHON_USEDEP}]
    net-p2p/btsync
    dev-libs/openssl[-bindist]
 "
