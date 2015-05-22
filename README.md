@@ -44,15 +44,9 @@ constraints it's a binary package for now.
 variable in make.conf the appropriate dictionaries are pulled in.
 See [#456090](https://bugs.gentoo.org/show_bug.cgi?id=456090)
 
-### dev-perl
-
-#### LWP-UserAgent-Cached-0.06
-
-* Cached user agent perl library. Added as youtube-viewer needs it.
-
 ### dev-python
 
-#### csvkit-0.9.2
+#### csvkit-0.9.2-r1
 
 * A suite of utilities for converting to and working with CSV
 
