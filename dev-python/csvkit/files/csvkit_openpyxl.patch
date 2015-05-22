@@ -1,0 +1,12 @@
+diff -Naur csvkit-0.9.1-orig/setup.py csvkit-0.9.1/setup.py
+--- csvkit-0.9.1-orig/setup.py	2015-03-31 02:29:34.000000000 +0100
++++ csvkit-0.9.1/setup.py	2015-05-21 17:19:34.382949738 +0100
+@@ -6,7 +6,7 @@
+ install_requires = [
+     'xlrd>=0.7.1',
+     'sqlalchemy>=0.6.6',
+-    'openpyxl==2.2.0-b1',
++    'openpyxl>=2.2.2',
+     'six>=1.6.1',
+     'python-dateutil==2.2'
+ ]

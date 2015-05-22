@@ -23,3 +23,9 @@ DEPEND="
   >=dev-python/six-1.6.1
   =dev-python/python-dateutil-2.2*
 "
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-openpyxl.patch"
+}
+
+
