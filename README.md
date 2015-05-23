@@ -44,6 +44,13 @@ constraints it's a binary package for now.
 variable in make.conf the appropriate dictionaries are pulled in.
 See [#456090](https://bugs.gentoo.org/show_bug.cgi?id=456090)
 
+### dev-embedded
+
+#### xr21v1410-1a
+
+Exar XR21V1410 series UART to USB serial kernel drivers. Supported devices are
+XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
+
 ### dev-python
 
 #### csvkit-0.9.2-r1
