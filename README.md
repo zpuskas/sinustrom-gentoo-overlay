@@ -70,6 +70,10 @@ See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 
 * NCurses based audio file tag (metadata) editor. 
 
+#### musescore-2.0.1
+
+* WYSIWYG Music Score Typesetter
+
 ### net-misc
 
 #### youtube-viewer-3.1.9
