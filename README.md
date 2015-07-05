@@ -72,7 +72,7 @@ See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
 
 ### net-misc
 
-#### youtube-viewer-3.1.5
+#### youtube-viewer-3.1.9
 
 * Add dev-perl/XML-Fast as a dependency to avoid constant error messages when
 using the GTK interface, plus newer release.

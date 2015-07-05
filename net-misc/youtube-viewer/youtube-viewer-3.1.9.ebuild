@@ -36,7 +36,7 @@ RDEPEND="
 		virtual/freedesktop-icon-theme
 		x11-libs/gdk-pixbuf:2[X,jpeg]
 	)"
-DEPEND="virtual/perl-Module-Build"
+DEPEND="dev-perl/Module-Build"
 
 SRC_TEST="do"
 
