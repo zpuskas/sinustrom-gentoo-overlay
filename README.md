@@ -36,14 +36,6 @@ useful for home automation tasks.
 Allows to follow and manage your stock portfolio. Due to building environment
 constraints it's a binary package for now.
 
-### app-text
-
-#### aspell-0.60.6.1
-
-* Add HU and HY language dependencies to ebuild so when using the LINGUAS
-variable in make.conf the appropriate dictionaries are pulled in.
-See [#456090](https://bugs.gentoo.org/show_bug.cgi?id=456090)
-
 ### dev-embedded
 
 #### xr21v1410-1a
