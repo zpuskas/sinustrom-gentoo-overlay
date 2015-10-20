@@ -96,6 +96,10 @@ for electronic schematic and PCB design.
 
 ### sci-misc
 
-#### imagej-1.49{s,v}
+#### imagej-1.49v
+
+* Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
+
+#### imagej-1.50c
 
 * Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
