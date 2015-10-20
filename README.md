@@ -30,7 +30,7 @@ useful for home automation tasks.
 
 ### app-office
 
-#### jstock-1.0.7.8
+#### jstock-1.0.7.10
 
 * jstock is a free stock market application intended towards more serious traders.
 Allows to follow and manage your stock portfolio. Due to building environment
