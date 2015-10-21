@@ -20,6 +20,12 @@ If you don't have layman setup yet, please visit the related
 
 ## <a name="packages"></a>Packages in this overlay
 
+### app-crypt
+
+#### pius-2.2.1
+
+* The PGP Individual UID Signer
+
 ### app-misc
 
 #### sunwait-20041208
