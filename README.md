@@ -39,7 +39,7 @@ constraints it's a binary package for now.
 
 ### app-text
 
-#### dblatex
+#### dblatex-0.3.7
 
 * dblatex is a program that transforms your SGML/XML DocBook documents to
 DVI, PostScript or PDF by translating them into pure LaTeX as a first process.
