@@ -36,6 +36,14 @@ useful for home automation tasks.
 Allows to follow and manage your stock portfolio. Due to building environment
 constraints it's a binary package for now.
 
+
+### app-text
+
+#### dblatex
+
+* dblatex is a program that transforms your SGML/XML DocBook documents to
+DVI, PostScript or PDF by translating them into pure LaTeX as a first process.
+
 ### dev-embedded
 
 #### xr21v1410-1a
