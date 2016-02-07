@@ -49,13 +49,6 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * A suite of utilities for converting to and working with CSV
 
-### kde-misc
-
-#### plasma-nm-0.9.3.5
-
-* Patch for compatibility with openconnect-7.01
-See [#532294](https://bugs.gentoo.org/show_bug.cgi?id=532294)
-
 ### media-sound
 
 #### cursetag
