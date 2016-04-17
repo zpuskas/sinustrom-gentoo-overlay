@@ -36,11 +36,19 @@ useful for home automation tasks.
 Allows to follow and manage your stock portfolio. Due to building environment
 constraints it's a binary package for now.
 
+### dev-db
+
+#### sqlite-2.8.16-r5
+
+* sqlite2 is the previous version of the popular embedded relational database.
+Since it was dropped from main tree, I'll make it available here for compatibility
+and porting data.
+
 ### dev-embedded
 
 #### xr21v1410-1a
 
-Exar XR21V1410 series UART to USB serial kernel drivers. Supported devices are
+* Exar XR21V1410 series UART to USB serial kernel drivers. Supported devices are
 XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 ### dev-python
