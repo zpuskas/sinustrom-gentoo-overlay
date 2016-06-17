@@ -77,6 +77,14 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * Bittorrent sync GTK UI for Linux systems.
 
+### sci-electronics
+
+#### kicad-4.0.2-r3
+
+* Electronic Schematic and PCB design tools. This ebuild fixes Boost-1.61 build
+bug [#583640](https://bugs.gentoo.org/show_bug.cgi?id=583640) and add libressl
+support [#569764](https://bugs.gentoo.org/show_bug.cgi?id=569764).
+
 ### sci-misc
 
 #### imagej-1.49v
