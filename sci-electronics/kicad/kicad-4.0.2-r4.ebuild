@@ -19,9 +19,9 @@ SRC_URI="https://launchpad.net/${PN}/${SERIES}/${PV}/+download/${P}.tar.xz
 	http://downloads.kicad-pcb.org/libraries/${PN}-footprints-${PV}.tar.gz
 	!minimal? ( https://github.com/KiCad/${PN}-library/archive/${PV}.tar.gz -> ${P}-library.tar.gz )
 	i18n? ( https://github.com/KiCad/${PN}-i18n/archive/${PV}.tar.gz -> ${P}-i18n.tar.gz )
-	https://github.com/twlostow/libcontext/archive/${LIBCONTEXT_COMMIT}.zip -> ${PN}-libcontext.zip"
+	https://github.com/twlostow/libcontext/archive/${LIBCONTEXT_COMMIT}.tar.gz -> ${PN}-libcontext.tar.gz"
 
-LICENSE="GPL-2 Boost-1.0"
+LICENSE="GPL-2+ GPL-3+ Boost-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples github i18n libressl minimal +python webkit"
@@ -41,7 +41,7 @@ CDEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X,opengl,webkit?]
 		dev-python/wxpython:${WX_GTK_VER}[opengl,${PYTHON_USEDEP}]
 		${PYTHON_DEPS}
 	)
-	>=dev-libs/boost-1.56[context,nls,threads,python?]
+	>=dev-libs/boost-1.56[nls,threads,python?]
 	github? (
 		libressl? ( dev-libs/libressl )
 		!libressl? ( dev-libs/openssl:0 )
@@ -53,7 +53,7 @@ CDEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X,opengl,webkit?]
 	x11-libs/cairo"
 DEPEND="${CDEPEND}
 	doc? ( app-doc/doxygen )
-	i18n? ( >=sys-devel/gettext-0.18 )
+	i18n? ( virtual/libintl )
 	python? ( dev-lang/swig:0 )
 	app-text/dos2unix"
 RDEPEND="${CDEPEND}
@@ -69,11 +69,13 @@ src_prepare() {
 	# Add separated out libcontext files and patch source to use them
 	mkdir -p "${S}/common/system/" || die "mkdir failed"
 	mkdir -p "${S}/include/system/" || die "mkdir failed"
-	cp "${WORKDIR}/libcontext-${LIBCONTEXT_COMMIT}/libcontext.cpp" "${S}/common/system/libcontext.cpp" || die "cp failed"
-	cp "${WORKDIR}/libcontext-${LIBCONTEXT_COMMIT}/libcontext.h" "${S}/include/system/libcontext.h" || die "cp failed"
+	cp "${WORKDIR}/${PN}-libcontext/libcontext.cpp" "${S}/common/system/libcontext.cpp" || die "cp failed"
+	cp "${WORKDIR}/${PN}-libcontext/libcontext.h" "${S}/include/system/libcontext.h" || die "cp failed"
 	# Path source to use new "built in" libcontext. Also patch libcontext.cpp to have correct include file.
 	# Path must be applied after new libcontext files have been copied to the kicad source directory.
 	epatch "${FILESDIR}/${PN}-boost-context.patch"
+	# Patch python swig import fixer build script
+	epatch "${FILESDIR}/${PN}-swig-import-helper.patch"
 
 	# remove all the non unix file endings
 	find "${S}" -type f -name "*.desktop" | xargs -n1 dos2unix
