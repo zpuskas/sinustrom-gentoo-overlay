@@ -36,6 +36,13 @@ useful for home automation tasks.
 Allows to follow and manage your stock portfolio. Due to building environment
 constraints it's a binary package for now.
 
+### app-vim
+
+#### extra-syntax
+
+* Fix merge issue for version 4 until it is fixed in the main tree. 
+[#592162](https://bugs.gentoo.org/show_bug.cgi?id=592162)
+
 ### dev-db
 
 #### sqlite-2.8.16-r5
