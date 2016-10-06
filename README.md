@@ -38,10 +38,10 @@ constraints it's a binary package for now.
 
 ### app-vim
 
-#### extra-syntax
+#### extra-syntax-4-r2
 
-* Fix merge issue for version 4 until it is fixed in the main tree. 
-[#592162](https://bugs.gentoo.org/show_bug.cgi?id=592162)
+* VIM extra syntax files for highlighting. Fix merge issue for version 4 until it
+is fixed in the main tree. [#592162](https://bugs.gentoo.org/show_bug.cgi?id=592162)
 
 ### dev-db
 
@@ -63,6 +63,14 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 #### csvkit-0.9.2-r1
 
 * A suite of utilities for converting to and working with CSV
+
+### media-gfx
+
+#### enblend-4.1.3-r2
+
+* Image Blending with Multiresolution Splines. Does not build with vigra-1.11.0 due
+to ABI changes. Fixing build by limiting vigra version.
+[#593094](https://bugs.gentoo.org/show_bug.cgi?id=593094)
 
 ### media-sound
 
