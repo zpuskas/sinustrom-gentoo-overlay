@@ -64,14 +64,6 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * A suite of utilities for converting to and working with CSV
 
-### media-gfx
-
-#### enblend-4.1.3-r2
-
-* Image Blending with Multiresolution Splines. Does not build with vigra-1.11.0 due
-to ABI changes. Fixing build by limiting vigra version.
-[#593094](https://bugs.gentoo.org/show_bug.cgi?id=593094)
-
 ### media-sound
 
 #### cursetag
