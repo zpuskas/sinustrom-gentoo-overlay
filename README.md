@@ -93,3 +93,9 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 #### imagej-1.50c
 
 * Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
+
+### sys-auth
+
+#### oath-toolkit-2.6.2
+
+* Toolkit for using one-time password authentication with HOTP/TOTP algorithms  
