@@ -74,6 +74,13 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * WYSIWYG Music Score Typesetter
 
+### net-libs
+
+#### opal-3.10.11-r1
+
+* C++ class library normalising numerous telephony protocols. Fix ffmpeg compatibility
+issue. [#575230](https://bugs.gentoo.org/show_bug.cgi?id=575230)
+
 ### net-p2p
 
 #### btsync-1.4.106
