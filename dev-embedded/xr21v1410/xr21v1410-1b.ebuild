@@ -5,9 +5,9 @@ EAPI=5
 
 inherit linux-mod linux-info eutils
 
-DESCRIPTION="Exar XR21V1410 series UART to USB kernel drivers [2.6.18 - 3.4.x] "
+DESCRIPTION="Exar XR21V1410 series UART to USB kernel drivers [3.6.x - recent]"
 HOMEPAGE="https://www.exar.com/product/interface/uarts/usb-uarts/xr21v1410"
-SRC_URI="https://www.exar.com/content/document.ashx?id=21652 -> ${P}.zip"
+SRC_URI="https://www.exar.com/content/document.ashx?id=21651 -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +22,8 @@ DEPEND="
 "
 
 pkg_setup() {
-	if kernel_is -gt 3 4; then
-		ewarn "This module only works with kernel versions 2.6.18 to 3.4.x"
+	if kernel_is -lt 3 6; then
+		ewarn "This module only works with kernel versions >=3.6.X"
 		die
 	fi
 	linux-mod_pkg_setup
