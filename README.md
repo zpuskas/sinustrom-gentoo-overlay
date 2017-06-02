@@ -64,7 +64,19 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * A suite of utilities for converting to and working with CSV
 
+### media-libs
+
+#### libid3tag-0.15.1b-r5
+
+* MAD id3tag library. Fix issue when building with dev-util/gperf-3.1 bug
+[#605158](https://bugs.gentoo.org/show_bug.cgi?id=605158)
+
 ### media-sound
+
+### audacity-2.0.5-r2
+
+* Free crossplatform audio editor. Fix issue when compiling with GCC6.3 (C++14).
+[#595764](https://bugs.gentoo.org/show_bug.cgi?id=595764)
 
 #### cursetag
 
