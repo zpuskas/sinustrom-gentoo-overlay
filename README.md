@@ -103,16 +103,6 @@ issue. [#575230](https://bugs.gentoo.org/show_bug.cgi?id=575230)
 
 * Bittorrent sync GTK UI for Linux systems.
 
-### sci-misc
-
-#### imagej-1.49v
-
-* Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
-
-#### imagej-1.50c
-
-* Read and write GIF, JPEG, and ASCII. Read BMP, DICOM, and FITS.
-
 ### sys-auth
 
 #### oath-toolkit-2.6.2
