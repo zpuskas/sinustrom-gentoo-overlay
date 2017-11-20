@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+		<description>Proxied maintainer. Assign bugs to him.</description>
+	</maintainer>
+	<longdescription lang="en">
+		A tool for distributing file system images. Similar to rsync, only
+		it uses a content addressable data algorithm.
+	</longdescription>
+	<use>
+		<flag name='fuse'>Build fuse2fs, a FUSE file system client for ext2/ext3/ext4 file systems</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">systemd/casync</remote-id>
+	</upstream>
+</pkgmetadata>

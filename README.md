@@ -93,6 +93,13 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 * C++ class library normalising numerous telephony protocols. Fix ffmpeg compatibility
 issue. [#575230](https://bugs.gentoo.org/show_bug.cgi?id=575230)
 
+### net-misc
+
+#### casync-2
+
+* A tool for distributing file system images. Similar to rsync, only it uses a content
+addressable data algorithm.
+
 ### net-p2p
 
 #### btsync-1.4.106
