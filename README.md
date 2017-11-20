@@ -73,11 +73,6 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 ### media-sound
 
-### audacity-2.0.5-r2
-
-* Free crossplatform audio editor. Fix issue when compiling with GCC6.3 (C++14).
-[#595764](https://bugs.gentoo.org/show_bug.cgi?id=595764)
-
 #### cursetag
 
 * NCurses based audio file tag (metadata) editor. 
