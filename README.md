@@ -83,13 +83,3 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * A tool for distributing file system images. Similar to rsync, only it uses a content
 addressable data algorithm.
-
-### net-p2p
-
-#### btsync-1.4.106
-
-* Bittorrent sync package
-
-#### btsync-gui-0.8.5
-
-* Bittorrent sync GTK UI for Linux systems.
