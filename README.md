@@ -93,9 +93,3 @@ addressable data algorithm.
 #### btsync-gui-0.8.5
 
 * Bittorrent sync GTK UI for Linux systems.
-
-### sys-auth
-
-#### oath-toolkit-2.6.2
-
-* Toolkit for using one-time password authentication with HOTP/TOTP algorithms  
