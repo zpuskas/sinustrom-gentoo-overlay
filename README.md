@@ -77,10 +77,6 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * NCurses based audio file tag (metadata) editor. 
 
-#### musescore-2.0.1
-
-* WYSIWYG Music Score Typesetter
-
 ### net-libs
 
 #### opal-3.10.11-r1
