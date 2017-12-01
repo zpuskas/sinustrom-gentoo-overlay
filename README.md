@@ -77,6 +77,14 @@ XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
 
 * NCurses based audio file tag (metadata) editor. 
 
+### media-video
+
+#### vcdimager-0.7.24-r1
+
+* GNU VCDimager. Fix compilation errors by updating API to work with
+dev-libs/libcdio-1.0.0. See bug
+[638646](https://bugs.gentoo.org/show_bug.cgi?id=638646)
+
 ### net-misc
 
 #### casync-2
