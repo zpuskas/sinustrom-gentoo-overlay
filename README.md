@@ -91,3 +91,9 @@ dev-libs/libcdio-1.0.0. See bug
 
 * A tool for distributing file system images. Similar to rsync, only it uses a content
 addressable data algorithm.
+
+### sys-auth
+
+#### oath-uri
+
+* A C/C++ library, and command line tool to generate OATH TOTP/HOTP key sharing URIs
