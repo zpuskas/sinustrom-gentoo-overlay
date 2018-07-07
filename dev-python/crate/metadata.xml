@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>zoltan@sinustrom.info</email>
+	<name>Zoltan Puskas</name>
+</maintainer>
+<longdescription lang="en">
+	A Python client library for CrateDB. It implements the Python DB API 2.0 and
+	includes support for SQLAlchemy.
+</longdescription>
+</pkgmetadata>
