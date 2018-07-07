@@ -32,3 +32,9 @@ python_prepare_all() {
 	find "${S}/src/${PN}/client" -name '*.txt' -exec mv {} "${S}/docs/" \; || die "Moving docs failed"
 	distutils-r1_python_prepare_all
 }
+
+python_install() {
+	distutils-r1_python_install
+	# Remove pth files, as namespace should be handled automatically
+	find "${ED}" -name '*.pth' -delete || die "Deleting .pth files failed"
+}
