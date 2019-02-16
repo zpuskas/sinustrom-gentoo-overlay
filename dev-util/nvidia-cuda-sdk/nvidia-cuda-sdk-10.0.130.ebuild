@@ -46,15 +46,11 @@ src_unpack() {
 	unpacker run_files/cuda-samples*run
 }
 
-pkg_setup() {
-	if use cuda || use opencl; then
-		cuda_pkg_setup
-	fi
-}
-
 src_prepare() {
+	if use cuda || use opencl; then
+		cuda_src_prepare
+	fi
 	export RAWLDFLAGS="$(raw-ldflags)"
-#	epatch "${FILESDIR}"/${P}-asneeded.patch
 
 	local file
 	while IFS="" read -d $'\0' -r file; do
