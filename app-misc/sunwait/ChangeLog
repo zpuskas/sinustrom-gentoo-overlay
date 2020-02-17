@@ -1,8 +1,0 @@
-# ChangeLog for app-misc/sunwait
-# Copyright 2014 Zoltan Puskas; Distributed under the GPL v2
-# $Header: $
-
-*sunwait-20041208 (17 Nov 2014)
-
-  17 Nov 2014; Zoltan Puskas <zoltan@sinustrom.info> sunwait-20041208.ebuild:
-  First version of sunwait ebuild with ~amd64 and ~x86 support.

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info:</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<longdescription>
+		Sunwait calculates sunrise or sunset times with civil, nautical,
+		astronomical and custom twilights. It is intended for use in
+		home automation with Windows Task Scheduler or cron.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">risacher/sunwait</remote-id>
+	</upstream>
+</pkgmetadata>

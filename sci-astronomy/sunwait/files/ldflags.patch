@@ -1,0 +1,12 @@
+diff -Naur sunwait-7326b53e5406c7ebd552ae6dc0fc659252a18e7f/makefile sunwait-7326b53e5406c7ebd552ae6dc0fc659252a18e7f-new/makefile
+--- sunwait-7326b53e5406c7ebd552ae6dc0fc659252a18e7f/makefile	2019-03-21 11:31:53.000000000 -0700
++++ sunwait-7326b53e5406c7ebd552ae6dc0fc659252a18e7f-new/makefile	2020-02-17 00:56:13.976400265 -0800
+@@ -7,7 +7,7 @@
+ 
+ C=gcc
+ CFLAGS=-c -Wall 
+-LDFLAGS= -lm -lstdc++
++LDFLAGS+= -lm -lstdc++
+ SOURCES=sunwait.cpp sunriset.cpp print.cpp sunwait.h sunriset.h print.h
+ OBJECTS=$(SOURCES:.cpp=.o)
+ EXECUTABLE=sunwait
