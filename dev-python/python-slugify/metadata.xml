@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer type="person">
-	<email>zoltan@sinustrom.info</email>
-	<name>Zoltan Puskas</name>
-</maintainer>
-<longdescription lang="en">
-	A Python slugify application that handles unicode.
-</longdescription>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<longdescription lang="en">
+		A Python slugify application that handles unicode.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">un33k/python-slugify</remote-id>
+	</upstream>
 </pkgmetadata>
