@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info:</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<longdescription>
+		MaxLinear (Exar) USB Serial Driver. This driver will work with any USB UART function in these Exar devices:
+		XR21V1410/1412/1414, XR21B1411, XR21B1420/1422/1424, XR22801/802/804.
+	</longdescription>
+</pkgmetadata>
