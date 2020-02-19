@@ -1,11 +1,11 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit cmake-utils flag-o-matic
 
-DESCRIPTION="A C/C++ library, and command line tool to generate OATH TOTP/HOTP key sharing URIs"
+DESCRIPTION="A C/C++ library, and CLI tool to generate OATH TOTP/HOTP key sharing URIs"
 HOMEPAGE="https://sinustrom.info/projects/oath-uri/"
 SRC_URI="https://github.com/zpuskas/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	local mycmakeargs=(
 		-DLIB_INSTALL_DIR="$(get_libdir)"
-	    -DOATHURI_CLI="$(usex cli)"
+		-DOATHURI_CLI="$(usex cli)"
 	)
 	cmake-utils_src_configure
 }

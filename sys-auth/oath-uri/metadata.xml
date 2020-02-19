@@ -7,4 +7,10 @@
 	<use>
 		<flag name="cli">Install command line tool</flag>
 	</use>
+	<longdescription>
+		A C/C++ library, and command line tool to generate OATH TOTP/HOTP key sharing URIs
+	</longdescription>
+	<upstream>
+		<remote-id type="github">zpuskas/oath-uri</remote-id>
+	</upstream>
 </pkgmetadata>
