@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python3_{3,4,5,6} )
+PYTHON_COMPAT=( python3_6 )
 inherit distutils-r1
 
 DESCRIPTION="agate is a data analysis library for humans, an alternative to numpy and pandas."
@@ -24,6 +24,7 @@ DEPEND="
 	>=dev-python/lxml-3.6.0
 	>=dev-python/nose-1.1.2
 	>=dev-python/parsedatetime-2.1
+	>=dev-python/pyicu-2.4.2
 	>=dev-python/python-slugify-1.2.1
 	>=dev-python/pytimeparse-1.1.5
 	>=dev-python/pytz-2015.4

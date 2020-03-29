@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer type="person">
-	<email>zoltan@sinustrom.info</email>
-	<name>Zoltan Puskas</name>
-</maintainer>
-<longdescription lang="en">
-	agate is a Python data analysis library that is optimized for humans instead
-	of machines. It is an alternative to numpy and pandas that solves real-world
-	problems with readable code.
-</longdescription>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<email>chrisgroskopf@gmail.com</email>
+			<name>Christopher Groskopf</name>
+		</maintainer>
+		<bugs-to>https://github.com/wireservice/agate/issues</bugs-to>
+		<remote-id type="github">wireservice/agate</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		agate is a Python data analysis library that is optimized for humans instead
+		of machines. It is an alternative to numpy and pandas that solves real-world
+		problems with readable code.
+	</longdescription>
 </pkgmetadata>
