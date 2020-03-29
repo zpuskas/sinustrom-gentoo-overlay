@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer type="person">
-	<email>zoltan@sinustrom.info</email>
-	<name>Zoltan Puskas</name>
-</maintainer>
-<longdescription lang="en">
-	csvkit is a suite of command-line tools for converting to and working with
-	CSV, the king of tabular file formats.
-</longdescription>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<email>chrisgroskopf@gmail.com</email>
+			<name>Christopher Groskopf</name>
+		</maintainer>
+		<bugs-to>https://github.com/wireservice/csvkit/issues</bugs-to>
+		<remote-id type="github">wireservice/csvkit</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		csvkit is a suite of command-line tools for converting to and working with
+		CSV, the king of tabular file formats.
+	</longdescription>
 </pkgmetadata>
