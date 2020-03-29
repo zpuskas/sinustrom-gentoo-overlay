@@ -1,9 +1,10 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python3_{4,5,6} )
+PYTHON_COMPAT=( python3_{6,7,8} )
+DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="A Python client library for CrateDB."
@@ -28,8 +29,6 @@ python_prepare_all() {
 	rm -rf "${S}/src/${PN}/client/sqlalchemy/tests" || die "Removing tests failed"
 	find "${S}/src/${PN}/client" -name 'test*' -delete || die "Removing tests failed"
 	rm "${S}/src/${PN}/client/invalid_ca.pem" || die "Removing tests failed"
-	# Move docs from source to doc folder
-	find "${S}/src/${PN}/client" -name '*.txt' -exec mv {} "${S}/docs/" \; || die "Moving docs failed"
 	distutils-r1_python_prepare_all
 }
 
