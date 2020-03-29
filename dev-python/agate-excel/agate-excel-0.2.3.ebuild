@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python3_{3,4,5,6} )
+PYTHON_COMPAT=( python3_{6,7} )
 inherit distutils-r1
 
 DESCRIPTION="Adds read support for Excel files (xls and xlsx) to agate."
@@ -21,7 +21,7 @@ DEPEND="
 	>=dev-python/openpyxl-2.3.0
 	>=dev-python/sphinx-1.2.2
 	>=dev-python/sphinx_rtd_theme-0.1.6
-	>=dev-python/tox-1.3
+	>=dev-python/tox-3.1.0
 	>=dev-python/wheel-0.24.0
 	>=dev-python/xlrd-0.9.4
 "

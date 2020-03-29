@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer type="person">
-	<email>zoltan@sinustrom.info</email>
-	<name>Zoltan Puskas</name>
-</maintainer>
-<longdescription lang="en">
-	agate-excel adds read support for Excel files (xls and xlsx) to agate.
-</longdescription>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<email>chrisgroskopf@gmail.com</email>
+			<name>Christopher Groskopf</name>
+		</maintainer>
+		<bugs-to>https://github.com/wireservice/agate-excel/issues</bugs-to>
+		<remote-id type="github">wireservice/agate-excel</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		agate-excel adds read support for Excel files (xls and xlsx) to agate.
+	</longdescription>
 </pkgmetadata>
