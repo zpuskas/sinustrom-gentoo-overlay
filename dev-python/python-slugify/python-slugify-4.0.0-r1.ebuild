@@ -4,6 +4,7 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7} )
+DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="A Python slugify application that handles unicode."
@@ -16,6 +17,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-python/unidecode-0.04.16
+	>=dev-python/unidecode-1.1.1
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/unidecode.patch"
+)
