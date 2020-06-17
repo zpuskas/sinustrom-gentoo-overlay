@@ -1,0 +1,155 @@
+From fd03d97c37c1811b7f0cc072761b3dc6656eee81 Mon Sep 17 00:00:00 2001
+From: name <name@example.com>
+Date: Sun, 17 May 2020 13:36:04 -0700
+Subject: [PATCH] Fix privacy leak bug #2222
+
+---
+ features/authentication.feature | 33 +++++++++++++++++++++++++++++++--
+ github/client.go                | 25 +++++--------------------
+ github/client_test.go           | 16 +++++++++++-----
+ 3 files changed, 47 insertions(+), 27 deletions(-)
+
+diff --git a/features/authentication.feature b/features/authentication.feature
+index 2675530b9..7740b5d1c 100644
+--- a/features/authentication.feature
++++ b/features/authentication.feature
+@@ -7,7 +7,7 @@ Feature: OAuth authentication
+       """
+       require 'socket'
+       require 'etc'
+-      machine_id = "#{Etc.getlogin}@#{Socket.gethostname}"
++      machine_id = "<unidentified machine>"
+ 
+       post('/authorizations') {
+         assert_basic_auth 'mislav', 'kitty'
+@@ -37,6 +37,35 @@ Feature: OAuth authentication
+     And the file "~/.config/hub" should contain "oauth_token: OTOKEN"
+     And the file "~/.config/hub" should have mode "0600"
+ 
++  Scenario: Auth token note machine id from HUB_MACHINE
++    Given the GitHub API server:
++      """
++      machine_id = "mydevmachine"
++
++      post('/authorizations') {
++        assert_basic_auth 'mislav', 'kitty'
++        assert :scopes => ['repo', 'gist'],
++               :note => "hub for #{machine_id}",
++               :note_url => 'https://hub.github.com/'
++        status 201
++        json :token => 'OTOKEN'
++      }
++      get('/user') {
++        halt 401 unless request.env['HTTP_AUTHORIZATION'] == 'token OTOKEN'
++        json :login => 'MiSlAv'
++      }
++      post('/user/repos') {
++        halt 401 unless request.env['HTTP_AUTHORIZATION'] == 'token OTOKEN'
++        status 201
++        json :full_name => 'mislav/dotfiles'
++      }
++      """
++    Given $HUB_MACHINE is "mydevmachine"
++    When I run `hub create` interactively
++    When I type "mislav"
++    And I type "kitty"
++    Then the exit status should be 0
++
+   Scenario: Prompt for username & password, receive personal access token
+     Given the GitHub API server:
+       """
+@@ -90,7 +119,7 @@ Feature: OAuth authentication
+       """
+       require 'socket'
+       require 'etc'
+-      machine_id = "#{Etc.getlogin}@#{Socket.gethostname}"
++      machine_id = "<unidentified machine>"
+ 
+       post('/authorizations') {
+         assert_basic_auth 'mislav', 'kitty'
+diff --git a/github/client.go b/github/client.go
+index 9b8c868ef..a9b00dabe 100644
+--- a/github/client.go
++++ b/github/client.go
+@@ -10,7 +10,6 @@ import (
+ 	"net/http"
+ 	"net/url"
+ 	"os"
+-	"os/exec"
+ 	"path"
+ 	"path/filepath"
+ 	"sort"
+@@ -1302,31 +1301,17 @@ func newScopeSet(s string) scopeSet {
+ }
+ 
+ func authTokenNote(num int) (string, error) {
+-	n := os.Getenv("USER")
++	m := os.Getenv("HUB_MACHINE")
+ 
+-	if n == "" {
+-		n = os.Getenv("USERNAME")
+-	}
+-
+-	if n == "" {
+-		whoami := exec.Command("whoami")
+-		whoamiOut, err := whoami.Output()
+-		if err != nil {
+-			return "", err
+-		}
+-		n = strings.TrimSpace(string(whoamiOut))
+-	}
+-
+-	h, err := os.Hostname()
+-	if err != nil {
+-		return "", err
++	if m == "" {
++		m = "<unidentified machine>"
+ 	}
+ 
+ 	if num > 1 {
+-		return fmt.Sprintf("hub for %s@%s %d", n, h, num), nil
++		return fmt.Sprintf("hub for %s %d", m, num), nil
+ 	}
+ 
+-	return fmt.Sprintf("hub for %s@%s", n, h), nil
++	return fmt.Sprintf("hub for %s", m), nil
+ }
+ 
+ func perPage(limit, max int) int {
+diff --git a/github/client_test.go b/github/client_test.go
+index 291d4828e..773a66169 100644
+--- a/github/client_test.go
++++ b/github/client_test.go
+@@ -3,7 +3,7 @@ package github
+ import (
+ 	"fmt"
+ 	"net/http"
+-	"regexp"
++	"os"
+ 	"testing"
+ 
+ 	"github.com/github/hub/v2/internal/assert"
+@@ -35,13 +35,19 @@ func TestAuthTokenNote(t *testing.T) {
+ 	note, err := authTokenNote(1)
+ 	assert.Equal(t, nil, err)
+ 
+-	reg := regexp.MustCompile("hub for (.+)@(.+)")
+-	assert.T(t, reg.MatchString(note))
++	assert.Equal(t, "hub for <unidentified machine>", note)
+ 
+ 	note, err = authTokenNote(2)
+ 	assert.Equal(t, nil, err)
++	assert.Equal(t, "hub for <unidentified machine> 2", note)
+ 
+-	reg = regexp.MustCompile("hub for (.+)@(.+) 2")
+-	assert.T(t, reg.MatchString(note))
++	os.Setenv("HUB_MACHINE", "mydevmachine")
+ 
++	note, err = authTokenNote(1)
++	assert.Equal(t, nil, err)
++	assert.Equal(t, "hub for mydevmachine", note)
++
++	note, err = authTokenNote(2)
++	assert.Equal(t, nil, err)
++	assert.Equal(t, "hub for mydevmachine 2", note)
+ }
