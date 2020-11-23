@@ -1,0 +1,17 @@
+diff -Naur med-4.1.0-orig/config/cmake_files/medMacros.cmake med-4.1.0/config/cmake_files/medMacros.cmake
+--- med-4.1.0-orig/config/cmake_files/medMacros.cmake	2020-01-30 08:04:19.000000000 -0800
++++ med-4.1.0/config/cmake_files/medMacros.cmake	2020-11-23 01:55:56.195273585 -0800
+@@ -505,9 +505,9 @@
+   FOREACH(input ${PYFILE2COMPINST})
+     GET_FILENAME_COMPONENT(inputname ${input} NAME)
+     INSTALL(FILES ${input} DESTINATION ${CMAKE_INSTALL_PREFIX}/${PYFILELOC})
+-    INSTALL(CODE "MESSAGE(STATUS \"py compiling \$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/${PYFILELOC}/${inputname}\")")
+-    INSTALL(CODE "SET(CMD \"import py_compile ; py_compile.compile('\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/${PYFILELOC}/${inputname}')\")")
+-    INSTALL(CODE "EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -c \"\${CMD}\")")
+-    INSTALL(CODE "EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -O -c \"\${CMD}\")")
++    #INSTALL(CODE "MESSAGE(STATUS \"py compiling \$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/${PYFILELOC}/${inputname}\")")
++    #INSTALL(CODE "SET(CMD \"import py_compile ; py_compile.compile('\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/${PYFILELOC}/${inputname}')\")")
++    #INSTALL(CODE "EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -c \"\${CMD}\")")
++    #INSTALL(CODE "EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -O -c \"\${CMD}\")")
+   ENDFOREACH(input ${PYFILE2COMPINST})
+ ENDMACRO(INSTALL_AND_COMPILE_PYTHON_FILE PYFILE2COMPINST PYFILELOC)
