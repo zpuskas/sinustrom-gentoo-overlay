@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/openzim/libzim/issues</bugs-to>
+		<remote-id type="github">openzim/libzim</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		The ZIM library is the reference implementation for the ZIM file format.
+		It's a solution to read and write ZIM files on many systems and
+		architectures.
+	</longdescription>
+</pkgmetadata>
