@@ -16,13 +16,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-python/agate-1.2.2
-	>=dev-python/nose-1.1.2
-	>=dev-python/openpyxl-2.3.0
-	>=dev-python/sphinx-1.2.2
-	>=dev-python/sphinx_rtd_theme-0.1.6
-	>=dev-python/tox-3.1.0
-	>=dev-python/wheel-0.24.0
-	>=dev-python/xlrd-0.9.4
+	>=dev-python/agate-1.2.2[${PYTHON_USEDEP}]
+	>=dev-python/nose-1.1.2[${PYTHON_USEDEP}]
+	>=dev-python/openpyxl-2.3.0[${PYTHON_USEDEP}]
+	>=dev-python/sphinx-1.2.2[${PYTHON_USEDEP}]
+	>=dev-python/sphinx_rtd_theme-0.1.6[${PYTHON_USEDEP}]
+	>=dev-python/tox-3.1.0[${PYTHON_USEDEP}]
+	>=dev-python/wheel-0.24.0[${PYTHON_USEDEP}]
+	>=dev-python/xlrd-0.9.4[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
