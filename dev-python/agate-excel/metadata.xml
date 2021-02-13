@@ -13,7 +13,4 @@
 		<bugs-to>https://github.com/wireservice/agate-excel/issues</bugs-to>
 		<remote-id type="github">wireservice/agate-excel</remote-id>
 	</upstream>
-	<longdescription lang="en">
-		agate-excel adds read support for Excel files (xls and xlsx) to agate.
-	</longdescription>
 </pkgmetadata>
