@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -49,9 +49,9 @@ DEPEND="${RDEPEND}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-0001-CMakeLists.txt-Gentoo-specific-patches.patch
-	"${FILESDIR}"/${P}-0002-ng-Togl2.1-CMakeLists.txt-Gentoo-specific-fixes.patch
-	"${FILESDIR}"/${P}-0003-CMakeLists.txt-find-external-pybind11.patch
+	"${FILESDIR}"/${PN}-6.2.2009-0001-CMakeLists.txt-Gentoo-specific-patches.patch
+	"${FILESDIR}"/${PN}-6.2.2009-0002-ng-Togl2.1-CMakeLists.txt-Gentoo-specific-fixes.patch
+	"${FILESDIR}"/${PN}-6.2.2009-0003-CMakeLists.txt-find-external-pybind11.patch
 )
 
 DOCS=( AUTHORS NEWS README.md TODO )
