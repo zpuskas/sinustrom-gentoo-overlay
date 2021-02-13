@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-python/urllib3-1.9
+	>=dev-python/urllib3-1.9[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 
