@@ -1,11 +1,11 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 inherit linux-mod linux-info eutils
 
-DESCRIPTION="MaxLinear (Exar) XR series UART to USB kernel drivers"
+DESCRIPTION="MaxLinear (Exar) XR21 series UART to USB kernel drivers"
 HOMEPAGE="https://www.maxlinear.com/products/interface/uarts/usb-uarts"
 SRC_URI="https://www.maxlinear.com/content/document.ashx?id=21651 -> ${P}.zip"
 
