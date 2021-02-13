@@ -13,7 +13,4 @@
 		<bugs-to>https://github.com/wireservice/agate-dbf/issues</bugs-to>
 		<remote-id type="github">wireservice/agate-dbf</remote-id>
 	</upstream>
-	<longdescription lang="en">
-		agate-dbf adds read support for dbf files to agate.
-	</longdescription>
 </pkgmetadata>
