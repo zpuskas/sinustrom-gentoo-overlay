@@ -16,12 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-python/sphinx-1.2.2
-	>=dev-python/agate-1.5.0
-	>=dev-python/dbfread-2.0.5
-	>=dev-python/nose-1.1.2
-	>=dev-python/sphinx_rtd_theme-0.1.6
-	>=dev-python/tox-1.3
-	>=dev-python/wheel-0.24.0
+	>=dev-python/sphinx-1.2.2[${PYTHON_USEDEP}]
+	>=dev-python/agate-1.5.0[${PYTHON_USEDEP}]
+	>=dev-python/dbfread-2.0.5[${PYTHON_USEDEP}]
+	>=dev-python/nose-1.1.2[${PYTHON_USEDEP}]
+	>=dev-python/sphinx_rtd_theme-0.1.6[${PYTHON_USEDEP}]
+	>=dev-python/tox-1.3[${PYTHON_USEDEP}]
+	>=dev-python/wheel-0.24.0[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
