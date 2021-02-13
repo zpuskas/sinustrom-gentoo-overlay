@@ -13,7 +13,4 @@
 		<bugs-to>https://github.com/wireservice/agate-sql/issues</bugs-to>
 		<remote-id type="github">wireservice/agate-sql</remote-id>
 	</upstream>
-	<longdescription lang="en">
-		agate-sql adds SQL read/write support to agate.
-	</longdescription>
 </pkgmetadata>
