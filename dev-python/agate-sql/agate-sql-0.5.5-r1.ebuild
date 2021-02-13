@@ -16,13 +16,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	dev-python/crate
-	>=dev-python/agate-1.5.0
-	>=dev-python/nose-1.1.2
-	>=dev-python/sphinx-1.2.2
-	>=dev-python/sphinx_rtd_theme-0.1.6
-	>=dev-python/sqlalchemy-1.0.8
-	>=dev-python/tox-1.3
-	>=dev-python/wheel-0.24.0
+	dev-python/crate[${PYTHON_USEDEP}]
+	>=dev-python/agate-1.5.0[${PYTHON_USEDEP}]
+	>=dev-python/nose-1.1.2[${PYTHON_USEDEP}]
+	>=dev-python/sphinx-1.2.2[${PYTHON_USEDEP}]
+	>=dev-python/sphinx_rtd_theme-0.1.6[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-1.0.8[${PYTHON_USEDEP}]
+	>=dev-python/tox-1.3[${PYTHON_USEDEP}]
+	>=dev-python/wheel-0.24.0[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
