@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zoltan@sinustrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<email>saeed.gnu@gmail.com</email>
+			<name>Saeed Rasooli</name>
+		</maintainer>
+		<bugs-to>https://github.com/ilius/pyglossary/issues</bugs-to>
+		<remote-id type="github">ilius/pyglossary</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		A tool for converting dictionary files aka glossaries.
+		The primary purpose is to be able to use our offline glossaries in any
+		Open Source dictionary we like on any OS/device.
+	</longdescription>
+</pkgmetadata>
