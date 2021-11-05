@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{7,8,9} )
 
@@ -35,10 +35,10 @@ RDEPEND="
 	jpeg? ( virtual/jpeg:0= )
 	python? (
 		$(python_gen_cond_dep \
-			'dev-python/pybind11[${PYTHON_MULTI_USEDEP}]')
+			'dev-python/pybind11[${PYTHON_USEDEP}]')
 	)
 	mpi? (
-		>=sci-libs/parmetis-4.0.3:=[mpi?]
+		>=sci-libs/parmetis-4.0.3:=
 		virtual/mpi[cxx,threads]
 		opencascade? ( >=sci-libs/hdf5-1.10.5:=[mpi] )
 	)
