@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit linux-mod linux-info eutils
+inherit linux-mod linux-info
 
 DESCRIPTION="MaxLinear (Exar) XR21 series UART to USB kernel drivers"
 HOMEPAGE="https://www.maxlinear.com/products/interface/uarts/usb-uarts"
@@ -22,9 +22,13 @@ S="${WORKDIR}/xr_usb_serial_common_lnx-3.6-and-newer-pak"
 MODULE_NAMES="xr_usb_serial_common(misc:${S})"
 BUILD_TARGETS="clean all"
 
+PATCHES=(
+	"${FILESDIR}/tty-api.patch"
+)
+
 pkg_setup() {
-	if kernel_is -lt 3 6; then
-		ewarn "This module only works with kernel versions >=3.6.X"
+	if kernel_is -lt 4 0; then
+		ewarn "This module only works with kernel versions >=4.0"
 		die
 	fi
 	linux-mod_pkg_setup
