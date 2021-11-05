@@ -9,7 +9,9 @@
 		<flag name="cli">Install command line tool</flag>
 	</use>
 	<longdescription>
-		A C/C++ library, and command line tool to generate OATH TOTP/HOTP key sharing URIs
+		oath-uri is an open source C/C++ library and command line tool to
+		generate OATH TOTP/HOTP key sharing URI for soft tokens, also known as
+		one-time password authentication applications.
 	</longdescription>
 	<upstream>
 		<remote-id type="github">zpuskas/oath-uri</remote-id>
