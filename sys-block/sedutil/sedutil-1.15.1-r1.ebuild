@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools toolchain-funcs
+inherit autotools
 
 DESCRIPTION="The Drive Trust Alliance Self Encrypting Drive Utility"
 HOMEPAGE="https://github.com/Drive-Trust-Alliance/sedutil"
