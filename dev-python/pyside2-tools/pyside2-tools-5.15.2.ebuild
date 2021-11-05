@@ -1,14 +1,14 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 # TODO: Add PyPy once officially supported. See also:
 #     https://bugreports.qt.io/browse/PYSIDE-535
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_{8,9} )
 CMAKE_IN_SOURCE_BUILD=1
 
-inherit cmake-utils python-r1 virtualx
+inherit cmake python-r1 virtualx
 
 MY_P=pyside-setup-opensource-src-${PV}
 
@@ -43,25 +43,20 @@ S=${WORKDIR}/${MY_P}/sources/${PN}
 DOCS=( README.md )
 
 src_prepare() {
-	cmake-utils_src_prepare
+	cmake_src_prepare
 
 	python_copy_sources
 
 	pyside-tools_prepare() {
 		pushd "${BUILD_DIR}" >/dev/null || die
 
-		if python_is_python3; then
-			# Remove Python 2-specific paths.
-			rm -rf pyside2uic/port_v2 || die
+		# Remove Python 2-specific paths.
+		rm -rf pyside2uic/port_v2 || die
 
-			# Generate proper Python 3 test interfaces with the "-py3" option.
-			sed -i -e \
-				's~${PYSIDERCC_EXECUTABLE}~"${PYSIDERCC_EXECUTABLE} -py3"~' \
-				tests/rcc/CMakeLists.txt || die
-		else
-			# Remove Python 3-specific paths.
-			rm -rf pyside2uic/port_v3 || die
-		fi
+		# Generate proper Python 3 test interfaces with the "-py3" option.
+		sed -i -e \
+			's~${PYSIDERCC_EXECUTABLE}~"${PYSIDERCC_EXECUTABLE} -py3"~' \
+			tests/rcc/CMakeLists.txt || die
 
 		# Force testing against the current Python version.
 		sed -i -e "/pkg-config/ s:shiboken2:&-${EPYTHON}:" \
@@ -82,14 +77,14 @@ src_configure() {
 			"${mycmakeargs[@]}"
 			-DPYTHON_CONFIG_SUFFIX="-${EPYTHON}"
 		)
-		CMAKE_USE_DIR="${BUILD_DIR}" cmake-utils_src_configure
+		CMAKE_USE_DIR="${BUILD_DIR}" cmake_src_configure
 	}
 	python_foreach_impl pyside-tools_configure
 }
 
 src_compile() {
 	pyside-tools_compile() {
-		CMAKE_USE_DIR="${BUILD_DIR}" cmake-utils_src_compile
+		CMAKE_USE_DIR="${BUILD_DIR}" cmake_src_compile
 	}
 	python_foreach_impl pyside-tools_compile
 }
@@ -97,14 +92,14 @@ src_compile() {
 src_test() {
 	pyside-tools_test() {
 		local -x PYTHONDONTWRITEBYTECODE
-		CMAKE_USE_DIR="${BUILD_DIR}" virtx cmake-utils_src_test
+		CMAKE_USE_DIR="${BUILD_DIR}" virtx cmake_src_test
 	}
 	python_foreach_impl pyside-tools_test
 }
 
 src_install() {
 	pyside-tools_install() {
-		CMAKE_USE_DIR="${BUILD_DIR}" cmake-utils_src_install
+		CMAKE_USE_DIR="${BUILD_DIR}" cmake_src_install
 	}
 	python_foreach_impl pyside-tools_install
 
