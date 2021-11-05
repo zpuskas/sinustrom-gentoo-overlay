@@ -20,4 +20,4 @@ RDEPEND="sys-libs/zlib
 	dev-libs/xapian
 	sys-fs/e2fsprogs"
 
-DEPEND="dev-util/pkgconfig"
+BDEPEND="virtual/pkgconfig"
