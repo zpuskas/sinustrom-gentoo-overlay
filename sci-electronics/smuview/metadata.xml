@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>zoltan@sinustrom.info</email>
+<name>Zoltan Puskas</name>
+</maintainer>
+<longdescription>
+    SmuView (sometimes abbreviated as "SV") is a Qt based GUI for power
+    supplies, electronic loads and all sorts of measurement devices like
+    multimeters, LCR meters, scales and so on.
+</longdescription>
+<upstream>
+<remote-id type="github">knarfS/smuview</remote-id>
+</upstream>
+</pkgmetadata>
