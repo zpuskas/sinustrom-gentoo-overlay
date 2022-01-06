@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
+	>=dev-libs/crypto++-8.5.0:=
 	>=dev-cpp/tclap-1.2.2
-	<=dev-libs/crypto++-8.3.0:=
 	>=dev-libs/libutf8proc-2.5.0
 	>=sys-fs/fuse-2.9.9:0
 "
@@ -28,7 +28,7 @@ DEPEND="
 BDEPEND=""
 
 PATCHES=(
-	"${FILESDIR}/${P}-system-utf8lib.patch"
+	"${FILESDIR}/${P}-unbundle-libs.patch"
 	"${FILESDIR}/${P}-fix-type-errors.patch"
 )
 
