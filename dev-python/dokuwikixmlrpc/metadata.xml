@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="person">
+        <email>zoltan@sinustrom.info</email>
+                <name>Zoltan Puskas</name>
+        </maintainer>
+        <upstream>
+                <bugs-to>https://github.com/kynan/dokuwikixmlrpc/issues</bugs-to>
+                <remote-id type="github">kynan/dokuwikixmlrpc</remote-id>
+        </upstream>
+        <longdescription lang="en">
+                Python module which implements DokuWiki's XML-RPC interface. Can be used
+                standalone or with the DokuVimKi plugin for vim.
+        </longdescription>
+</pkgmetadata>
