@@ -1,7 +1,7 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{7,8,9} )
 inherit distutils-r1
@@ -19,3 +19,5 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+distutils_enable_tests pytest
