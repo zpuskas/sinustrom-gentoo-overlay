@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="reddio is a command-line interface for Reddit written in POSIX sh"
 HOMEPAGE="https://gitlab.com/aaronNG/reddio"
-SRC_URI="https://gitlab.com/aaronNG/${PN}/-/archive/v${PV}/${PN}-v${PV}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="https://gitlab.com/aaronNG/${PN}/-/archive/v.${PV}/${PN}-v.${PV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,17 +21,10 @@ RDEPEND="
 "
 BDEPEND=""
 
-S="${WORKDIR}/${PN}-v${PV}"
-
-src_prepare() {
-	eapply "${FILESDIR}/${P}-date.patch"
-	eapply_user
-	sed -i -e 's/"DOC_FOLDER="/"DOC_FOLDER?="/' Makefile || die "Sed failed!"
-	sed -i -e 's|/usr/local/|/usr/|' reddio || die "Sed failed!"
-}
+S="${WORKDIR}/${PN}-v.${PV}"
 
 src_compile() { :; }
 
 src_install() {
-	emake PREFIX="${ED}/usr" DOC_FOLDER="${ED}/usr/share/doc/${P}" install
+	emake DESTDIR="${ED}" PREFIX="/usr" DOCDIR="/usr/share/doc/${P}" install
 }
