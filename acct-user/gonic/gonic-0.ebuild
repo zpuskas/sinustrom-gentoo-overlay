@@ -6,7 +6,7 @@ EAPI=8
 inherit acct-user
 
 DESCRIPTION="A user for media-sound/gonic"
-ACCT_USER_ID=516
+ACCT_USER_ID=526
 ACCT_USER_GROUPS=( gonic )
 ACCT_USER_HOME="/var/lib/gonic"
 
