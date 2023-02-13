@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module systemd tmpfiles
+inherit go-module optfeature systemd tmpfiles
 
 EGO_SUM=(
 	"cloud.google.com/go v0.33.1/go.mod"
@@ -276,10 +276,9 @@ src_install() {
 	# Log directory
 	keepdir "/var/log/${PN}"
 
-	# Default media directories
-	keepdir "/var/lib/${PN}/music"
-	keepdir "/var/lib/${PN}/podcast"
-	newtmpfiles "${FILESDIR}/${PN}.tmpfilesd" "${PN}.conf"
+	# Default state directory
+	keepdir "/var/lib/${PN}"
+	newtmpfiles "${FILESDIR}/${PN}.tmpfiles" "${PN}.conf"
 
 	dodoc README.md
 
@@ -287,15 +286,18 @@ src_install() {
 }
 
 pkg_postinst() {
+	chown gonic:gonic "${EPREFIX}/var/lib/${PN}"
 	chown gonic:gonic "${EPREFIX}/var/log/${PN}"
 	chmod 750 "${EPREFIX}/var/log/${PN}"
 	tmpfiles_process "${PN}.conf"
+
+	optfeature "Running in jukebox mode" media-video/mpv
 
 	einfo ""
 	einfo "gonic presents an HTTP server for the admin interface. The default"
 	einfo "user/pass is admin/admin. The web UI listens on 127.0.0.1:4747. It's"
 	einfo "highly recommended to use a reverse proxy to serve the admin interface"
-	einfo "via HTTPS. See example nginx configuration in the README.md!"
+	einfo "via HTTPS or to configure a TLS certificate for the service."
 	einfo ""
 
 	if ! use systemd; then

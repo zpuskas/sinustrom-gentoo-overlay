@@ -7,6 +7,9 @@ Type=simple
 User=gonic
 Group=gonic
 
+StateDirectory=gonic
+CacheDirectory=gonic
+
 Restart=on-failure
 RestartSec=10
 
