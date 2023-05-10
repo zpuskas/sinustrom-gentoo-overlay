@@ -11,9 +11,9 @@ mainly because one of the following reasons:
 
 ## Adding this overlay to your system
 
-Available in layman. Just run the following command to add it:
+Just run the following command to add it:
 
-    # layman -a sinustrom
+    # eselect repository add sinustrom
 
-If you don't have layman setup yet, please visit the related
-[Gentoo Wiki](https://wiki.gentoo.org/wiki/Layman) page.
+For more details on managing overlays, please visit the related
+[Gentoo Wiki](https://wiki.gentoo.org/wiki/Eselect/Repository) page.
