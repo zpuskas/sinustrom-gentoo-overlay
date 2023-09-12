@@ -60,6 +60,7 @@ RDEPEND="
 	media-libs/libsndfile
 	media-libs/opus
 	media-sound/lame
+	media-video/pipewire[pipewire-alsa]
 	sys-libs/zlib:=
 "
 # dev-cpp/gtest is required even when tests are disabled!
