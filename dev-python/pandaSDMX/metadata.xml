@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="person">
+        <email>zoltan@sinustrom.info</email>
+                <name>Zoltan Puskas</name>
+        </maintainer>
+        <upstream>
+                <remote-id type="github">dr-leo/pandaSDMX</remote-id>
+                <remote-id type="pypi">pandaSDMX</remote-id>
+        </upstream>
+        <longdescription lang="en">
+            pandaSDMX implements SDMX 2.1 (ISO 17369:2013), a format for
+            exchange of statistical data and metadata used by national
+            statistical agencies, central banks, and international
+            organisations.
+        </longdescription>
+</pkgmetadata>
