@@ -151,6 +151,9 @@ src_install() {
 	newbin contrib/statfs/statfs "${PN}-statfs"
 	newbin contrib/findholes/findholes "${PN}-findholes"
 	newbin contrib/atomicrename/atomicrename "${PN}-atomicrename"
+	# Create symlinks to enable usage in /etc/fstab
+	dosym -r /usr/bin/${PN} /usr/sbin/mount.fuse.${PN}
+	dosym -r /usr/bin/${PN} /usr/sbin/mount.${PN}
 
 	if use man; then
 		doman gocryptfs.1
