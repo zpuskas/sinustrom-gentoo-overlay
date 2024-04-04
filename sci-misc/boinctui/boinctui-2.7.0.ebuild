@@ -21,7 +21,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	${RDEPEND}
-	sys-devel/autoconf
+	dev-build/autoconf
 "
 
 src_configure() {
