@@ -1,0 +1,39 @@
+From ac50e3ecb0eecd7d05de6115a34c5a05d069e077 Mon Sep 17 00:00:00 2001
+From: Fabio Pugliese Ornellas <fabio.ornellas@gmail.com>
+Date: Sat, 6 Aug 2022 00:07:30 +0100
+Subject: [PATCH 4/4] Fix lockingrange
+
+---
+ linux/DtaDevLinuxDrive.cpp | 2 +-
+ linux/DtaDevOS.cpp         | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/linux/DtaDevLinuxDrive.cpp b/linux/DtaDevLinuxDrive.cpp
+index d04606a..dda4642 100755
+--- a/linux/DtaDevLinuxDrive.cpp
++++ b/linux/DtaDevLinuxDrive.cpp
+@@ -31,7 +31,7 @@ uint8_t DtaDevLinuxDrive::prepareForS3Sleep(uint8_t lockingrange, const vector<u
+     opal_lock_unlock opal_ioctl_data={};
+     opal_ioctl_data.l_state = OPAL_RW;
+     opal_ioctl_data.session.who = OPAL_ADMIN1;
+-    opal_ioctl_data.session.opal_key.lr = 0;
++    opal_ioctl_data.session.opal_key.lr = lockingrange;
+ 
+     size_t hash_len=min(password_hash.size(), sizeof(opal_ioctl_data.session.opal_key.key));
+     LOG(D2) << "Setting a hash of length" << hash_len;
+diff --git a/linux/DtaDevOS.cpp b/linux/DtaDevOS.cpp
+index 342d63f..6ad6001 100644
+--- a/linux/DtaDevOS.cpp
++++ b/linux/DtaDevOS.cpp
+@@ -189,7 +189,7 @@ uint8_t DtaDevOS::prepareForS3Sleep(uint8_t lockingrange, char* password)
+     DtaHashPwd(hash, password, this);
+     hash.erase(hash.begin(), hash.begin()+2);
+ 
+-    err = drive->prepareForS3Sleep(0, hash);
++    err = drive->prepareForS3Sleep(lockingrange, hash);
+     if (err)
+     {
+         LOG(E) << "Error saving the password to  the kernel errno = " << errno;
+-- 
+2.47.0
+
