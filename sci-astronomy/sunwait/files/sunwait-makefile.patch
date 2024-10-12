@@ -1,0 +1,16 @@
+diff -Naur sunwait-orig/makefile sunwait/makefile
+--- sunwait-orig/makefile	2024-10-12 16:16:05.814875282 -0700
++++ sunwait/makefile	2024-10-12 16:16:50.551461497 -0700
+@@ -6,9 +6,9 @@
+ # 2022-09-16  DRR  0.91 Accept changes from @mstilkerich Michael Stilkerich switches to C from C++
+ #
+ 
+-CFLAGS=-c -Wall -std=c99 -O2 -Wextra -pedantic
+-CXXFLAGS=-c -Wall 
+-LDFLAGS= -lm 
++CFLAGS+=-c -Wall -std=c99 -O2 -Wextra -pedantic
++CXXFLAGS+=-c -Wall 
++LDFLAGS+= -lm 
+ SOURCES=sunwait.c sunriset.c print.c
+ HEADERS=sunwait.h sunriset.h print.h
+ OBJECTS=$(SOURCES:.c=.o)
