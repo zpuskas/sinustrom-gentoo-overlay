@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="person">
+        <email>zoltan@sinustrom.info</email>
+                <name>Zoltan Puskas</name>
+        </maintainer>
+        <upstream>
+            <remote-id type="github">google/gasket-driver</remote-id>
+        </upstream>
+        <longdescription lang="en">
+            The Coral Gasket Driver allows usage of the Coral EdgeTPU on Linux systems.
+            The driver contains two modules, Gasket (Google ASIC Software,
+            Kernel Extensions, and Tools) is a top level driver for lightweight
+            communication with Google ASICs, and Apex which refers to the EdgeTPU v1.
+        </longdescription>
+</pkgmetadata>
