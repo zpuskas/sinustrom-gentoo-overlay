@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zoltan@siunstrom.info</email>
+		<name>Zoltan Puskas</name>
+	</maintainer>
+	<longdescription lang="en">
+		Admin console for Beanstalk queue server, written in PHP, that can
+		be used to view and manage tubes and jobs across multiple instances of
+		the server.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">ptrofimov/beanstalk_console</remote-id>
+	</upstream>
+</pkgmetadata>
