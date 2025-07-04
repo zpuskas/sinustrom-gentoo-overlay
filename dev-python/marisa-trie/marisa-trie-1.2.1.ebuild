@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit distutils-r1
 
 DESCRIPTION="Static memory-efficient Trie-like structures for Python"
@@ -23,7 +23,7 @@ BDEPEND="
 	${RDEPEND}
 	test? (
 		dev-python/hypothesis[${PYTHON_USEDEP}]
-		dev-python/readme_renderer[${PYTHON_USEDEP}]
+		dev-python/readme-renderer[${PYTHON_USEDEP}]
 	)
 "
 
