@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_EXT=1
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit distutils-r1
 
 DESCRIPTION="The Python-libzim package allows you to read/write ZIM files in Python."
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	>=app-arch/libzim-8.1.1
+	>=app-arch/libzim-9.3.0
 "
 RDEPEND="${DEPEND}"
 BDEPEND="${RDEPEND}"
