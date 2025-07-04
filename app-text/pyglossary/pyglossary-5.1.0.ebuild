@@ -3,8 +3,8 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..10} )
-DISTUTILS_USE_SETUPTOOLS=rdepend
+PYTHON_COMPAT=( python3_{11..13} )
+DISTUTILS_USE_PEP517=setuptools
 inherit distutils-r1
 
 DESCRIPTION="A tool for converting dictionary files aka glossaries."
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 DEPEND="
-	dev-libs/marisa[${PYTHON_USEDEP}]
+	>=dev-libs/marisa-0.2.7[${PYTHON_USEDEP}]
 	dev-python/html5lib[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
@@ -29,17 +29,3 @@ DEPEND="
 	gtk? ( dev-python/pygobject[${PYTHON_USEDEP}] )
 "
 RDEPEND="${DEPEND}"
-
-python_compile() {
-	# Build fails without $USER, even though is not used anywhere. Set it as a
-	# workaround. https://github.com/ilius/pyglossary/issues/463
-	local -x USER="portage"
-	distutils-r1_python_compile
-}
-
-python_install() {
-	# Build fails without $USER, even though is not used anywhere. Set it as a
-	# workaround. https://github.com/ilius/pyglossary/issues/463
-	local -x USER="portage"
-	distutils-r1_python_install
-}
