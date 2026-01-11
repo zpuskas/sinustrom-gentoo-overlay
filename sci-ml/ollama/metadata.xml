@@ -12,7 +12,18 @@
 	<use>
 		<flag name="cuda">Enable NVIDIA CUDA support</flag>
 		<flag name="mkl">Use <pkg>sci-libs/mkl</pkg> for blas, lapack and sparse blas routines</flag>
-		<flag name="rocm">Enable ROCm gpu computing support</flag>
+        <flag name="rocm">Enable ROCm gpu computing support</flag>
+        <flag name="cuda_sm_75">Compile for compute capability 7.5</flag>
+        <flag name="cuda_sm_80">Compile for compute capability 8.0</flag>
+        <flag name="cuda_sm_86">Compile for compute capability 8.6</flag>
+        <flag name="cuda_sm_87">Compile for compute capability 8.7</flag>
+        <flag name="cuda_sm_89">Compile for compute capability 8.9</flag>
+        <flag name="cuda_sm_90">Compile for compute capability 9.0</flag>
+        <flag name="cuda_sm_100">Compile for compute capability 10.0</flag>
+        <flag name="cuda_sm_103">Compile for compute capability 10.3</flag>
+        <flag name="cuda_sm_110">Compile for compute capability 11.0</flag>
+        <flag name="cuda_sm_120">Compile for compute capability 12.0</flag>
+        <flag name="cuda_sm_121">Compile for compute capability 12.1</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">ollama/ollama</remote-id>

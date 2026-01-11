@@ -39,8 +39,22 @@ X86_CPU_FLAGS=(
 	avx_vnni
 )
 CPU_FLAGS=( "${X86_CPU_FLAGS[@]/#/cpu_flags_x86_}" )
-IUSE="blas ${CPU_FLAGS[*]} cuda mkl rocm vulkan"
+CUDA_FLAGS=(
+	cuda_sm_75
+	cuda_sm_80
+	cuda_sm_86
+	cuda_sm_87
+	cuda_sm_89
+	cuda_sm_90
+	cuda_sm_100
+	cuda_sm_103
+	cuda_sm_110
+	cuda_sm_120
+	cuda_sm_121
+)
+IUSE="blas ${CPU_FLAGS[*]} cuda ${CUDA_FLAGS[*]} mkl rocm vulkan"
 # IUSE+=" opencl"
+REQUIRED_USE="cuda? ( || ( ${CUDA_FLAGS[*]} ) )"
 
 RESTRICT="mirror test"
 
@@ -273,9 +287,17 @@ src_configure() {
 		CUDAHOSTCXX="$(cuda_gccdir)"
 		CUDAHOSTLD="$(tc-getCXX)"
 
-		# Only complie for local GPUs until cuda.eclass is updated
+		# Only complie for selected GPUs until cuda.eclass is updated
+		local -x cuda_arches=()
+		for cuda_arch in "${CUDA_FLAGS[@]}"; do
+			if use $cuda_arch && [[ "$cuda_arch" =~ cuda_sm_([0-9]+) ]]; then
+				cuda_arches+=("${BASH_REMATCH[1]}")
+			fi
+		done
+		enabled_cuda_arches=$(IFS=';'; echo "${cuda_arches[*]}")
+
 		mycmakeargs+=(
-			-DCMAKE_CUDA_ARCHITECTURES="native"
+			-DCMAKE_CUDA_ARCHITECTURES="${enabled_cuda_arches}"
 		)
 
 		cuda_add_sandbox -w
