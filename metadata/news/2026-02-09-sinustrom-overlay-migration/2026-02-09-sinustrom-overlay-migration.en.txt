@@ -1,0 +1,48 @@
+Title: sinustrom overlay migration
+Author: Zoltan Puskas <zpuskas@sinustrom.info>
+Posted: 2026-02-09
+Revision: 1
+News-Item-Format: 2.0
+
+What is happening?
+==================
+
+sinustrom overlay has migrated from Github[1] to Codeberg[2].
+
+All future updates will happen in the Codeberg repository. The Github
+version has been archived as of today, and will receive no further
+updates.
+
+The Github repository will be deleted on 2026-09-01.
+
+If local settings are not updated to the new location by the date
+above, repository syncing will start throwing an error. Installed
+ebuilds should continue to work until changes in ::gentoo break it.
+
+User Action Required
+====================
+
+Users using any ebuilds from the sinustrom overlay need to re-add the
+repository. If using the 'eselect' tool then:
+
+    eselect repository remove sinustrom
+    eselect repository enable sinustrom
+
+If the overlay was added manually instead of using 'eselect', then the
+'sync-uri' in the relevant conf file in '/etc/portage/repos.conf' needs
+updating from 'github.com' to 'codeberg.org', like so:
+
+    [sinustrom]
+    sync-uri = https://codeberg.org/zpuskas/sinustrom-gentoo-overlay
+
+Non 'eselect' users also must delete the existing checkout and re-sync:
+
+    rm -rf /var/db/repos/sinustrom
+    emerge --sync sinustrom
+
+This will ensure continued support and new updates to all ebuilds in
+the overlay. There is no need to rebuild already emerged ebuilds from
+the sinustrom overlay after this migration.
+
+[1] https://github.com/zpuskas/sinustrom-gentoo-overlay
+[2] https://codeberg.org/zpuskas/sinustrom-gentoo-overlay
